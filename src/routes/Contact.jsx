@@ -1,13 +1,23 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ContactImg from "../assets/2.jpg";
 
-const Home = () => {
+const Contact = () => {
   return (
     <>
-      <h1>This is Contact</h1>
       <Navbar />
+      <Hero
+        cName="hero-mid"
+        heroImg={ContactImg}
+        title="Contact"
+        // text="Choose Your Favourite Destination."
+        // buttonText="Travel Plan"
+        // url="/"
+        btnClass="hide"
+      />
     </>
   );
 };
 
-export default Home;
+export default Contact;
