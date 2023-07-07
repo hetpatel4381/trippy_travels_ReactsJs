@@ -1,19 +1,20 @@
 import "./HeroStyles.css";
 import React from "react";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <>
-      <div className="hero">
+      <div className={props.cName}>
         <img
           alt="HeroImg"
-          src="https://images.unsplash.com/photo-1687991242328-d4220043d1d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          src={props.heroImg}
         />
       </div>
 
       <div className="hero-text">
-        <h1>Your Journey Your Story</h1>
-        <p>Choose Your Favourite Destination.</p>
+        <h1>{props.title}</h1>
+        <p>{props.text}</p>
+        <a href={props.url} className={props.btnClass}>{props.buttonText}</a>
       </div>
     </>
   );
